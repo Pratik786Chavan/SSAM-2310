@@ -1,0 +1,121 @@
+{
+	"Caption": "/SAPAssetManager/Rules/Notifications/Task/NotificationTaskHeader.js",
+	"OnLoaded": "/SAPAssetManager/Rules/Notifications/Task/Details/NotificationTaskDetailsOnPageLoad.js",
+
+	"ActionBar":
+	{
+		"Items":
+		[
+            {
+                "Position": "right",
+				"SystemItem": "Edit",
+                "OnPress": "/SAPAssetManager/Rules/Notifications/Task/NotificationTaskUpdateNav.js",
+				"Visible": "/SAPAssetManager/Rules/UserAuthorizations/Notifications/EnableNotificationEdit.js"
+            },
+			{
+                "Position": "right",
+            	"SystemItem": "Add",
+                "OnPress": "/SAPAssetManager/Rules/Notifications/Task/Details/NotificationTaskDetailsPopover.js",
+				"Visible": "/SAPAssetManager/Rules/UserAuthorizations/Notifications/EnableNotificationEdit.js"
+            }
+        ]
+	},
+	"Controls":
+	[{
+		"Sections":
+		[{
+			"Header":
+			{
+				"Caption" : "$(L,notification_task_detail)"
+			},
+			"KeyAndValues":
+			[{
+				"KeyName" : "$(L,description)",
+				"Value" : "{TaskText}"
+			},
+			{
+				"KeyName" : "$(L,sort_number)",
+				"Value" : "{TaskSortNumber}"
+			},
+			{
+				"KeyName" : "$(L,group)",
+				"Value" : "/SAPAssetManager/Rules/Notifications/Task/Details/NotificationTaskDetailsGroup.js"
+			},
+			{
+				"KeyName" : "$(L,status)",
+				"Value" : "/SAPAssetManager/Rules/Notifications/Task/Details/NotificationTaskDetailsMobileStatus.js"
+			},
+			{
+				"KeyName" : "$(L,code)",
+				"Value" : "/SAPAssetManager/Rules/Notifications/Task/Details/NotificationTaskDetailsCode.js"
+			}],
+			"_Type" : "Section.Type.KeyValue"
+		},
+		{
+            "SimplePropertyCells":
+            [{
+                "SimplePropertyCell": {
+                    "AccessoryType": "disclosureIndicator",
+                    "KeyName": "$(L,notes)",
+                    "Value": "/SAPAssetManager/Rules/Notes/NotesCount.js",
+                    "OnPress": "/SAPAssetManager/Rules/Notes/NotesViewNav.js"
+                }
+            }],
+			"Layout":
+			{
+				"NumberOfColumns" : 1
+			},
+            "_Type" : "Section.Type.SimplePropertyCollection"
+        }],
+		"_Type": "Control.Type.SectionedTable",
+		"_Name": "SectionedTable",
+		"DataSubscriptions": ["Documents", "MyNotifDocuments", "MyNotifHeaderLongTexts","MyNotifItemLongTexts","MyNotifTaskLongTexts"]
+	}],
+	"ToolBar": {
+        "Visible": "/SAPAssetManager/Rules/Notifications/MobileStatus/TaskEnableMobileStatus.js",
+        "Controls": [
+            {
+				"_Name": "FlexibleSpaceLeft",
+				"_Type": "Control.Type.ToolbarItem",
+				"SystemItem": "FlexibleSpace",
+				"Visible": "/SAPAssetManager/Rules/Common/DetailsPageToolbar/IsLeftSpaceVisible.js"
+			},
+            {
+                "_Name": "NotificationTaskDetailsPageTbI0",
+                "_Type": "Control.Type.ToolbarItem",
+                "Caption": "/SAPAssetManager/Rules/Common/DetailsPageToolbar/ToolbarItemGetCaption.js",
+                "OnPress": "/SAPAssetManager/Rules/Common/DetailsPageToolbar/ToolbarItemGetOnPress.js",
+                "Visible": "/SAPAssetManager/Rules/Common/DetailsPageToolbar/ToolbarItemGetVisibility.js",
+                "ItemType": "/SAPAssetManager/Rules/Common/DetailsPageToolbar/ToolbarItemType.js"
+            },
+            {
+				"_Name": "FlexibleSpaceMiddle",
+				"_Type": "Control.Type.ToolbarItem",
+				"SystemItem": "FlexibleSpace",
+				"Visible": "/SAPAssetManager/Rules/Common/DetailsPageToolbar/IsMiddleSpaceVisible.js"
+			},
+            {
+                "_Name": "NotificationTaskDetailsPageTbI1",
+                "_Type": "Control.Type.ToolbarItem",
+                "Caption": "/SAPAssetManager/Rules/Common/DetailsPageToolbar/ToolbarItemGetCaption.js",
+                "OnPress": "/SAPAssetManager/Rules/Common/DetailsPageToolbar/ToolbarItemGetOnPress.js",
+                "Visible": "/SAPAssetManager/Rules/Common/DetailsPageToolbar/ToolbarItemGetVisibility.js"
+            },
+            {
+				"_Name": "FlexibleSpaceRight",
+				"_Type": "Control.Type.ToolbarItem",
+				"SystemItem": "FlexibleSpace",
+				"Visible": "/SAPAssetManager/Rules/Common/DetailsPageToolbar/IsRightSpaceVisible.js"
+			},
+            {
+                "_Name": "NotificationTaskDetailsPageTbI2",
+                "_Type": "Control.Type.ToolbarItem",
+                "Caption": "/SAPAssetManager/Rules/Common/DetailsPageToolbar/ToolbarItemGetCaption.js",
+                "OnPress": "/SAPAssetManager/Rules/Common/DetailsPageToolbar/ToolbarItemGetOnPress.js",
+                "Visible": "/SAPAssetManager/Rules/Common/DetailsPageToolbar/ToolbarItemGetVisibility.js"
+            }
+        ]
+    },
+	"_Type": "Page",
+	"_Name": "NotificationTaskDetailsPage"
+}

@@ -1,0 +1,70 @@
+{
+	"Caption": "Header Page",
+	"ActionBar": {
+		"Items": [
+			"/SAPAssetManager/Pages/Fragments/SyncButton.fragment"
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+                   "_Type": "Section.Type.KeyValue",
+                    "_Name": "OutboundDeliveryHeaderPage",
+                    "KeyAndValues": [
+                       {
+                            "KeyName": "$(L,customer)",
+                            "Value": "{Customer_Nav/Customer} {Customer_Nav/Name1}"
+                        },
+                        {
+                            "KeyName": "$(L,delivery_date)",
+                            "Value": "/SAPAssetManager/Rules/Inventory/Common/GetDocumentDateForInventoryHeader.js"
+                        },
+						{
+                            "KeyName": "$(L,delivery_type)",
+                            "Value": "{DeliveryType}"
+						},
+						{
+                            "KeyName": "$(L,delivery_priority)",
+                            "Value": "{DeliveryPriority}"
+						},
+						{
+                            "KeyName": "$(L,document_category)",
+                            "Value": "{DocumentCategory}"
+						},
+						{
+                            "KeyName": "$(L,overall_status)",
+                            "Value": "{OverallStatus}"
+						},
+						{
+                            "KeyName": "$(L,shipping_point)",
+                            "Value": "/SAPAssetManager/Rules/Inventory/OutboundDelivery/GetShippingPointDesc.js"
+						},
+                        { 
+                            "KeyName": "$(L,unloading_point)",
+                            "Value": "{UnloadingPoint}"
+						},
+						{
+                            "KeyName": "$(L,receiving_plant)",
+                            "Value": "{ReceivingPlant}"
+						},
+						{
+                            "KeyName": "$(L,ship_to_party)",
+                            "Value": "/SAPAssetManager/Rules/OutboundDelivery/GetShipToPartyDesc.js"
+                        },
+						{
+                            "KeyName": "$(L,weight)",
+                            "Value": "{TotalWeight} {WeightUnit}"
+                        }
+                    ]
+                }
+			],
+            "_Name": "SectionedTable",
+            "_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"DataSubscriptions": ["OnDemandObjects", "MaterialDocuments"],
+	"OnReturning": "/SAPAssetManager/Rules/Inventory/OutboundDelivery/OutboundDeliveryDetailsPageOnReturn.js",
+	"_Name": "OutboundDeliveryHeaderPage",
+	"_Type": "Page"
+}

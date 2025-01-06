@@ -1,0 +1,61 @@
+{
+    "Module": "extension-QuickActionBarFramework",
+    "Control": "QuickActionBarViewExtension",
+    "Class": "QuickActionBarViewExtension",
+    "Height": "/SAPAssetManager/Rules/QAB/QuickActionBarHeight.js",
+    "ExtensionProperties": {
+        "Chips": [
+                {
+                    "Label": "$(L,create_workorder)",
+                    "IsIconVisible": true,
+                    "Icon": "$(PLT,/SAPAssetManager/Images/QABAddWO.png,/SAPAssetManager/Images/QABAddWO.android.png)",
+                    "IsButtonVisible": "/SAPAssetManager/Rules/UserAuthorizations/WorkOrders/EnableWorkOrderCreate.js",
+                    "IsButtonEnabled": true,
+                    "Action": "/SAPAssetManager/Rules/WorkOrders/CreateUpdate/WorkOrderCreateNav.js"	
+                },
+                {
+                    "Label": "$(L,create_notification)",
+                    "IsIconVisible": true,
+                    "Icon": "$(PLT,/SAPAssetManager/Images/QABAddNotification.png,/SAPAssetManager/Images/QABAddNotification.android.png)",
+                    "IsButtonVisible": "/SAPAssetManager/Rules/UserAuthorizations/Notifications/EnableNotificationCreate.js",
+                    "IsButtonEnabled": true,	
+                    "Action": "/SAPAssetManager/Rules/Notifications/CreateUpdate/NotificationCreateChangeSetNav.js"
+                },
+                {
+                    "Label": "$(L,record_time)",
+                    "IsIconVisible": true,
+                    "Icon": "$(PLT,/SAPAssetManager/Images/QABAddTime.png,/SAPAssetManager/Images/QABAddTime.android.png)",
+                    "IsButtonVisible": "/SAPAssetManager/Rules/TimeSheets/TimeSheetsIsEnabled.js",
+                    "IsButtonEnabled": true,
+                    "Action": "/SAPAssetManager/Rules/TimeSheets/Entry/CreateUpdate/TimeSheetEntryCreateNav.js"
+                },
+                {
+                    "Label": "$(L,record_time)",
+                    "IsIconVisible": true,
+                    "Icon": "$(PLT,/SAPAssetManager/Images/QABAddTime.png,/SAPAssetManager/Images/QABAddTime.android.png)",
+                    "IsButtonVisible": "/SAPAssetManager/Rules/QAB/IsAddConfirmationButtonVisible.js",
+                    "IsButtonEnabled": true,
+                    "Action": "/SAPAssetManager/Rules/Confirmations/CreateUpdate/ConfirmationCreateUpdateNav.js"
+                },
+                {
+                    "Label": "$(L,view_map)",
+                    "IsIconVisible": "/SAPAssetManager/Rules/Maps/IsMTGISEnabled.js",
+                    "Icon": "$(PLT,/SAPAssetManager/Images/QABViewMap.png,/SAPAssetManager/Images/QABViewMap.android.png)",
+                    "IsButtonVisible": true,
+                    "IsButtonEnabled": true,
+                    "Action": "/SAPAssetManager/Actions/Extensions/MapNav.action"
+                }
+            ]
+        },
+    "_Type": "Section.Type.Extension",
+    "_Name": "QuickActionBarExtensionSectionMT",
+    "FooterSeparator": false,
+    "HeaderSeparator": false,
+    "Header": {
+        "UseTopPadding": false
+    },
+    "Footer": {
+        "UseBottomPadding": false
+    },
+    "Visible": "/SAPAssetManager/Rules/OverviewPage/IsQABSectionVisible.js"
+}

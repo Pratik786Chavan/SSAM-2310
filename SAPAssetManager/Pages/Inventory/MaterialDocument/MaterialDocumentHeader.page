@@ -1,0 +1,60 @@
+{
+	"Caption": "Header Page",
+	"ActionBar": {
+		"Items": [
+			"/SAPAssetManager/Pages/Fragments/SyncButton.fragment"
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+                   "_Type": "Section.Type.KeyValue",
+                    "_Name": "MaterialDocumentHeaderPage",
+                    "KeyAndValues": [
+                        {
+                            "KeyName":  "$(L, movement_type)",
+                            "Value": "/SAPAssetManager/Rules/Inventory/PurchaseOrder/GetFormattadTags.js"
+                        },
+                        {
+                            "KeyName": "$(L, document_year)",
+                            "Value": "{MaterialDocYear}"
+                        },
+						{
+                            "KeyName": "$(L, gr_gi_slip)",
+                            "Value": "{GoodsReceiptIssueNumber}"
+						},
+						{
+                            "KeyName": "$(L, bill_of_lading)",
+                            "Value": "{BillOfLading}"
+						},
+						{
+                            "KeyName": "$(L, document_date)",
+                            "Value": "/SAPAssetManager/Rules/Inventory/Common/GetDocumentDateForInventoryHeader.js"
+						},
+						{
+                            "KeyName": "$(L, posting_date)",
+                            "Value": "/SAPAssetManager/Rules/Inventory/Common/GetPostingDateForInventoryHeader.js"
+						},
+						{
+                            "KeyName": "$(L, delivery_note_ref_doc)",
+                            "Value": "{RefDocumentNumber}"
+						},
+                        { 
+                            "KeyName": "$(L, user_name)",
+                            "Value": "{UserName}"
+						},
+						{
+                            "KeyName": "$(L, header_text)",
+                            "Value": "{HeaderText}"
+						}
+                    ]
+                }
+			],
+            "_Name": "SectionedTable",
+            "_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Name": "MaterialDocumentHeaderPage",
+	"_Type": "Page"
+}

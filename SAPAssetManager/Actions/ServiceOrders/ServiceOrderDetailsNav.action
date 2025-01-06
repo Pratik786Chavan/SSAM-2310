@@ -1,0 +1,5 @@
+{
+    "_Type": "Action.Type.Navigation",
+    "PageToOpen": "/SAPAssetManager/Pages/ServiceOrders/ServiceOrderDetails.page",
+    "PageMetadata": "/SAPAssetManager/Rules/ServiceOrders/ServiceOrderDetailsPageMetadata.js"
+}

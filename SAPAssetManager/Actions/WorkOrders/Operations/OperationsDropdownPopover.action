@@ -1,0 +1,17 @@
+{
+	"PopoverItems":
+	[{
+		"Position": "right",
+		"Icon": "$(PLT,'',/SAPAssetManager/Images/filter.android.png)",
+		"Title": "$(L,filter)",
+		"OnPress": "/SAPAssetManager/Actions/WorkOrders/Operations/WorkOrderOperationsFilter.action",
+		"Visible": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationsDefaultModeButtonVisible.js"
+	},
+    {
+		"Position": "right",
+		"Title": "$(L,select)",
+		"Visible": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationsDefaultModeButtonVisible.js",
+		"OnPress": "/SAPAssetManager/Rules/WorkOrders/Operations/OperationsListViewChangeMode.js"
+	}],
+	"_Type": "Action.Type.PopoverMenu"
+}

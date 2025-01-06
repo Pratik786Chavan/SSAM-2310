@@ -1,0 +1,64 @@
+{
+	"Caption": "/SAPAssetManager/Rules/Documents/DownloadDocuments/DownloadDocumentsErrorsListViewCaption.js",
+	"ActionBar": {
+        "Items": [
+            {
+                "Position": "left",
+                "SystemItem": "$(PLT,'','Cancel')",
+				"Text": "$(L, close)",
+                "OnPress": "/SAPAssetManager/Actions/Page/CancelPage.action"
+            }
+        ]
+    },
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Header": {
+						"UseTopPadding": true
+					},
+					"ObjectCell": {
+						"Title": "/SAPAssetManager/Rules/Documents/DocumentFileName.js",
+						"Subhead": "{errorText}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "disclosureIndicator",
+						"OnPress": "/SAPAssetManager/Actions/Documents/DownloadDocumentsErrorDetailsNav.action"
+					},
+					"Target": "/SAPAssetManager/Rules/Documents/DownloadDocuments/DownloadDocumentsErrorsTarget.js",
+					"_Type": "Section.Type.ObjectTable"
+				},
+				{
+                    "Header": {
+                        "UseTopPadding": true
+                    },
+                    "Buttons": [{
+                        "Title" : "$(L,retry_download)",
+                        "ButtonType": "Text",
+                        "Semantic": "Tint",
+                        "_Name": "RetryDownload",
+                        "TextAlignment": "Center",
+                        "OnPress" : "/SAPAssetManager/Rules/Documents/DownloadDocuments/DownloadDocumentsRetryDownload.js"                      
+                    }],
+					"Visible": "/SAPAssetManager/Rules/Common/IsIOS.js",
+                    "_Type": "Section.Type.ButtonTable"
+                }
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"ToolBar": {
+		"Items": [
+			{
+				"_Name": "RetryDownloadToolbarItem",
+				"_Type": "Control.Type.ToolbarItem",
+				"Enabled": true,
+				"Caption": "$(L,retry_download)",
+				"OnPress": "/SAPAssetManager/Rules/Documents/DownloadDocuments/DownloadDocumentsRetryDownload.js"
+			}
+		],
+		"Visible": "/SAPAssetManager/Rules/Common/IsAndroid.js"
+	},
+	"_Name": "DownloadDocumentsErrorsListViewPage",
+	"_Type": "Page"
+}

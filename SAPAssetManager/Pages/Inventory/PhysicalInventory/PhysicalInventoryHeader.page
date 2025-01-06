@@ -1,0 +1,67 @@
+{
+	"Caption": "$(L,pi_header)",
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"KeyAndValues": [
+                        {
+                            "KeyName": "$(L,plant)",
+                            "Value": "/SAPAssetManager/Rules/Inventory/PhysicalInventory/GetPlantDescription.js"
+                        },
+						{
+                            "KeyName": "$(L,storage_location)",
+                            "Value": "/SAPAssetManager/Rules/Inventory/PhysicalInventory/GetStorageLocationDescription.js"
+                        },
+						{
+                            "KeyName": "$(L,special_stock_indicator)",
+                            "Value": "{{#Property:SpecialStock}}"
+                        },
+                        {
+                            "KeyName": "$(L,planned_count_date)",
+                            "Value": "/SAPAssetManager/Rules/Inventory/PhysicalInventory/GetPlannedCountdateForInventoryHeader.js"
+                        },
+						{
+                            "KeyName": "$(L,count_date)",
+                            "Value": "/SAPAssetManager/Rules/Inventory/PhysicalInventory/GetCountdateForInventoryHeader.js"
+                        },
+						{
+                            "KeyName": "$(L,count_status)",
+                            "Value": "/SAPAssetManager/Rules/Inventory/PhysicalInventory/GetCountStatusForInventoryHeader.js"
+                        },
+						 {
+                            "KeyName": "$(L,pi_number)",
+                            "Value": "{{#Property:PhysInvNo}}"
+                        },
+						{
+                            "KeyName": "$(L,pi_reference)",
+                            "Value": "{{#Property:Physinventref}}"
+                        },
+						{
+                            "KeyName": "$(L,pi_group_type)",
+                            "Value": "{{#Property:GroupingType}}"
+                        },
+						{
+                            "KeyName": "$(L,pi_group_criteria)",
+                            "Value": "{{#Property:GroupingCriteria}}"
+                        },
+						{
+                            "KeyName": "$(L,description)",
+                            "Value": "{{#Property:Description}}"
+                        }			
+					],
+                    "_Type": "Section.Type.KeyValue",
+                    "_Name": "KeyValueTable"
+				}														
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"_Name": "PhysicalInventoryHeader",
+	"_Type": "Page"
+}

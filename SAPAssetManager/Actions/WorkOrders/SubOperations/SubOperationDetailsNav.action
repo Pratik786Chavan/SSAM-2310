@@ -1,0 +1,5 @@
+{
+    "_Type" : "Action.Type.Navigation",
+    "PageToOpen" : "/SAPAssetManager/Pages/WorkOrders/SubOperation/SubOperationDetails.page",
+    "PageMetadata": "/SAPAssetManager/Rules/WorkOrders/SubOperations/SubOperationDetailsPageMetadata.js"
+}

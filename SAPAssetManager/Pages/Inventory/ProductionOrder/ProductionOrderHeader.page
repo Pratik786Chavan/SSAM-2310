@@ -1,0 +1,72 @@
+{
+	"Caption": "$(L, prod_ord_header)",
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"KeyAndValues": [
+						{
+                            "KeyName": "$(L, status)",
+							"Value": "$(L, open)"
+                        },
+						{
+                            "KeyName": "$(L, order_type)",
+							"Value": "{OrderType}"
+                        },
+						{
+                            "KeyName": "$(L, plant)",
+							"Value": "{ProductionPlant}"
+                        },
+						{
+                            "KeyName": "$(L, basic_start_date)",
+							"Value": "/SAPAssetManager/Rules/Inventory/ProductionOrder/GetBasicStartDateForProductionOrderHeader.js"
+                        },
+						{
+                            "KeyName": "$(L, reservation)",
+							"Value": "{Reservation}"
+                        },
+						{
+                            "KeyName": "$(L, routing_no)",
+							"Value": "{RoutingNumber}"
+                        },
+                        {
+                            "KeyName": "$(L, note)",
+							"Value": "/SAPAssetManager/Rules/Inventory/ProductionOrder/GetProductionOrderText.js"
+                        }
+					],
+					"_Type": "Section.Type.KeyValue",
+                    "_Name": "KeyValueTable"
+				}
+			],
+			"Target": {
+				"Service": "/SAPAssetManager/Services/AssetManager.service",
+				"EntitySet": "ProductionOrderHeaders"
+			},
+			"_Type": "Control.Type.SectionedTable",		
+			"_Name": "SectionedTable0"
+		}
+	],
+	"ToolBar": {
+        "Controls": [
+            {
+                "_Name": "FlexibleSpaceLeftTbI",
+                "_Type": "Control.Type.ToolbarItem",
+                "SystemItem": "FlexibleSpace"
+            },
+            {
+                "_Name": "IssuePartTbI",
+                "_Type": "Control.Type.ToolbarItem",
+                "Enabled" : "/SAPAssetManager/Rules/Inventory/Validation/GoodsIssueIssueAllIsAllowed.js",
+                "Caption": "$(L,issue_all)",
+                "OnPress": "/SAPAssetManager/Rules/Inventory/ProductionOrder/SetProductionOrderComponentsGoodsIssueIssueAll.js"
+            },
+            {
+                "_Name": "FlexibleSpaceRightTbI",
+                "_Type": "Control.Type.ToolbarItem",
+                "SystemItem": "FlexibleSpace"
+            }
+        ]
+    },
+	"_Type": "Page",
+	"_Name": "ProductionOrderHeader"
+}

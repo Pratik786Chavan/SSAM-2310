@@ -1,0 +1,78 @@
+{
+	"Caption": "/SAPAssetManager/Rules/Documents/DownloadDocuments/DownloadDocumentsPageCaption.js",
+	"ActionBar": {
+        "Items": [
+            {
+                "Position": "Left",
+                "SystemItem": "$(PLT,'','Cancel')",
+				"Text": "$(L, cancel)",
+                "OnPress": "/SAPAssetManager/Actions/Page/CancelPage.action"
+            },
+			{
+				"Position": "Right",
+				"Caption": "$(L, download)",
+				"OnPress": "/SAPAssetManager/Rules/Documents/DownloadDocuments/DownloadDocumentsOnDownloadPress.js"
+			}
+        ]
+    },
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Search": {
+						"Enabled": false
+					},
+					"Selection": {
+						"Mode": "Multiple",
+						"ExitOnLastDeselect": false
+					},
+					"Header": {
+						"UseTopPadding": true,
+						"Items": [
+							{
+								"_Type": "SectionHeaderItem.Type.Label",
+								"_Name": "SectionHeaderLabel",
+								"Title": "/SAPAssetManager/Rules/Documents/DownloadDocuments/DownloadDocumentsTotalSize.js",
+								"Position": "Left"
+							},
+							{
+								"_Type": "SectionHeaderItem.Type.Button",
+								"_Name": "SectionHeaderButtonSelectAll",
+								"Position": "Right",
+								"OnPress": "/SAPAssetManager/Rules/Documents/DownloadDocuments/DownloadDocumentsDeselectAll.js",
+								"Title": "$(L, deselect_all)",
+								"Visible": "/SAPAssetManager/Rules/Documents/DownloadDocuments/DownloadDocumentsDeselectAllButtonVisible.js"
+							},
+							{
+								"_Type": "SectionHeaderItem.Type.Button",
+								"_Name": "SectionHeaderButtonDeselectAll",
+								"Position": "Right",
+								"OnPress": "/SAPAssetManager/Rules/Documents/DownloadDocuments/DownloadDocumentsSelectAll.js",
+								"Title": "$(L, select_all)",
+								"Visible": "/SAPAssetManager/Rules/Documents/DownloadDocuments/DownloadDocumentsSelectAllButtonVisible.js"
+							}
+						]
+					},
+					"ObjectCell": {
+						"DetailImage": "/SAPAssetManager/Rules/Documents/DocumentTypeIcon.js",
+						"DetailImageIsCircular": false,
+						"PreserveIconStackSpacing": false,
+						"Title": "/SAPAssetManager/Rules/Documents/DocumentFileName.js",
+						"Subhead": "/SAPAssetManager/Rules/Documents/DocumentDescription.js",
+						"StatusText": "/SAPAssetManager/Rules/Documents/DocumentFileSizeWrapper.js",
+						"Selected": "/SAPAssetManager/Rules/Documents/DownloadDocuments/DownloadDocumentsCellSelected.js"
+					},
+					"Target": "/SAPAssetManager/Rules/Documents/DownloadDocuments/DownloadDocumentsTarget.js",
+					"OnSelectionChanged": "/SAPAssetManager/Rules/Documents/DownloadDocuments/DownloadDocumentsOnSelectionChanged.js",
+					"_Name": "DownloadDocumnetsList",
+					"_Type": "Section.Type.ObjectTable"
+				}
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"OnLoaded": "/SAPAssetManager/Rules/Documents/DownloadDocuments/DownloadDocumentsSelectAll.js",
+	"_Name": "DownloadDocumentsPage",
+	"_Type": "Page"
+}

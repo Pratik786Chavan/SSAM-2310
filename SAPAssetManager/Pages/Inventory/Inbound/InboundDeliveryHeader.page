@@ -1,0 +1,62 @@
+{
+	"Caption": "Header Page",
+	"ActionBar": {
+		"Items": [
+			"/SAPAssetManager/Pages/Fragments/SyncButton.fragment"
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+                   "_Type": "Section.Type.KeyValue",
+                    "_Name": "OutboundDeliveryHeaderPage",
+                    "KeyAndValues": [
+                       {
+                            "KeyName": "$(L,vendor)",
+                            "Value": "/SAPAssetManager/Rules/Inventory/PurchaseOrder/GetVendorName.js"
+                        },
+                        {
+                            "KeyName": "$(L,delivery_date)",
+                            "Value": "/SAPAssetManager/Rules/Inventory/Common/GetDocumentDateForInventoryHeader.js"
+                        },
+						{
+                            "KeyName": "$(L,delivery_type)",
+                            "Value": "{DeliveryType}"
+						},
+						{
+                            "KeyName": "$(L,delivery_priority)",
+                            "Value": "{DeliveryPriority}"
+						},
+						{
+                            "KeyName": "$(L,document_category)",
+                            "Value": "{DocumentCategory}"
+						},
+						{
+                            "KeyName": "$(L,overall_status)",
+                            "Value": "{OverallStatus}"
+						},
+						{
+                            "KeyName": "$(L,receiving_point)",
+                            "Value": "{ShippingPoint}"
+						},
+						{
+                            "KeyName": "$(L,receiving_plant)",
+                            "Value": "{ReceivingPlant}"
+						},
+						{
+                            "KeyName": "$(L,weight)",
+                            "Value": "{TotalWeight} {WeightUnit}"
+                        }
+                    ]
+                }
+			],
+            "_Name": "SectionedTable",
+            "_Type": "Control.Type.SectionedTable"
+		}
+	],
+	"DataSubscriptions": ["OnDemandObjects", "MaterialDocuments"],
+	"OnReturning": "/SAPAssetManager/Rules/Inventory/InboundDelivery/InboundDeliveryDetailsPageOnReturn.js",
+	"_Name": "InboundDeliveryHeaderPage",
+	"_Type": "Page"
+}

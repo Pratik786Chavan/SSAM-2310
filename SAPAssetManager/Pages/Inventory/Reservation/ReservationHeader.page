@@ -1,0 +1,51 @@
+{ 
+"Caption": "$(L,res_header)",
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"KeyAndValues": [
+                        {
+                            "KeyName": "$(L,reservation_date)",
+                            "Value": "/SAPAssetManager/Rules/Inventory/Common/GetDocumentDateForInventoryHeader.js"
+                        },
+                        {
+                            "KeyName": "$(L,status)",
+                            "Value": "/SAPAssetManager/Rules/Inventory/Reservation/GetReservationStatus.js"
+                        },
+                        {
+                            "KeyName": "$(L,movement_type)",
+                            "Value": "/SAPAssetManager/Rules/Inventory/Reservation/GetMovType.js"
+                        },
+                        {
+                            "KeyName": "$(L,cost_center)",
+                            "Value": "{CostCenter}"
+                        },
+                        {
+                            "KeyName": "$(L,project)",
+                            "Value": "{WBSElement}"
+                        },
+                        {
+                            "KeyName": "$(L,order_id)",
+                            "Value": "{OrderId}"
+                        },
+                        {
+                            "KeyName": "$(L,reservation_item_network)",
+                            "Value": "{Network}"
+                        }	
+				],
+                    "_Type": "Section.Type.KeyValue",
+                    "_Name": "KeyValueTable"
+				}														
+			],
+			"_Name": "SectionedTable0",
+			"_Type": "Control.Type.SectionedTable"
+		}
+    ],        
+"_Name": "ReservationHeaderPage",
+"_Type": "Page"
+}

@@ -1,0 +1,5 @@
+{
+	"_Type": "Action.Type.Message",
+	"Message": "$(L, download_documents_no_documents_avaialble_message)",
+	"OKCaption": "$(L, ok)"
+}

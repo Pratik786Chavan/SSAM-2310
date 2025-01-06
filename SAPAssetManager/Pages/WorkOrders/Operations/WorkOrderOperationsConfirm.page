@@ -1,0 +1,86 @@
+{
+    "Caption": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationConfirmCaption.js",
+	"OnLoaded": "/SAPAssetManager/Rules/WorkOrders/Operations/OperationConfirmationsLocalConfirmationsInit.js",
+	"OnReturning": "/SAPAssetManager/Rules/WorkOrders/Operations/OperationConfirmationsLocalConfirmationsUpdate.js",
+	"OnActivityBackPressed": "/SAPAssetManager/Rules/WorkOrders/CreateUpdate/CancelCheckOnBackNavAndroid.js",
+	"ActionBar":
+	{
+		"Items":
+		[{
+            "Position": "left",
+            "Text": "$(L,cancel)",
+            "SystemItem": "Cancel",
+            "OnPress": "/SAPAssetManager/Rules/WorkOrders/Operations/OperationConfirmationsCancelButton.js"
+        },
+		{
+			"_Name": "SelectToRemove",
+			"Position": "right",
+			"Text": "$(L,select)",
+			"OnPress": "/SAPAssetManager/Rules/WorkOrders/Operations/OperationConfirmationsChangeMode.js",
+			"Visible": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationsIsSelectionEnabled.js"
+		},
+        {
+			"_Name": "ConfirmItems",
+			"Position": "right",
+			"SystemItem": "Done",
+			"Text": "$(L,done)",
+			"OnPress": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationsConfirmation.js",
+			"Visible": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationsIsSelectionEnabled.js"
+		}]
+	},
+    "Controls":
+	[{
+		"Sections":
+		[{
+			"ObjectCell":
+			{
+				"PreserveIconStackSpacing": false,
+				"AccessoryType": "disclosureIndicator",
+				"Title": "{{#Property:OperationShortText}} ({{#Property:OperationNo}})",
+				"Subhead": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationOrderAndPhase.js",
+				"StatusText": "/SAPAssetManager/Rules/WorkOrders/Operations/BulkConfirmationTotalTimeDuration.js",
+				"SubstatusText": "/SAPAssetManager/Rules/MobileStatus/OperationMobileStatus.js",
+				"Footnote": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationIsFinalConfirmation.js",
+				"OnPress": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationConfirmationCreateNav.js"
+			},
+			"OnSelectionChanged": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationsConfirmSelectionChange.js",
+			"Selection": {
+                "ExitOnLastDeselect": false,
+                "Mode": "None"
+			},
+			"Target": {
+				"EntitySet": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationsConfirmEntitySet.js",
+				"Service": "/SAPAssetManager/Services/AssetManager.service",
+				"QueryOptions": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationsConfirmQueryOptions.js"
+			},
+			"_Type" : "Section.Type.ObjectTable",
+			"_Name" : "WorkOrderOperationListSection"
+		}],
+		"_Type" : "Control.Type.SectionedTable",
+		"_Name" : "SectionedTable"
+	}],
+	"ToolBar":
+	{
+		"Items":
+		[{
+			"_Name": "LeftSpace",
+			"_Type": "Control.Type.ToolbarItem",
+			"SystemItem": "FlexibleSpace"
+		},
+		{
+			"_Name": "WorkOrderOperationsConfirmRemoveBtn",
+			"_Type": "Control.Type.ToolbarItem",
+			"Caption": "$(L,remove)",
+			"Enabled": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationsConfirmRemoveEnabled.js",
+			"OnPress": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationsConfirmRemoveSelectedItems.js"
+		},
+		{
+			"_Name": "RightSpace",
+			"_Type": "Control.Type.ToolbarItem",
+			"SystemItem": "FlexibleSpace"
+		}],
+		"Visible": "/SAPAssetManager/Rules/WorkOrders/Operations/WorkOrderOperationsSelectModeButtonVisible.js"
+	},
+	"_Type": "Page",
+	"_Name": "WorkOrderOperationsConfirmPage"
+}

@@ -1,0 +1,71 @@
+{
+	"Caption": "$(L,personalization)",
+	"ActionBar":
+    {
+        "Items":
+        [{
+            "Position": "right",
+            "SystemItem": "$(PLT,'Done','')",
+            "Text": "/SAPAssetManager/Rules/Common/Platform/DoneText.js",
+            "OnPress": "/SAPAssetManager/Rules/UserPreferences/UserPreferencesUpdate.js"
+        }]
+    },
+    "Controls": [{
+		"_Name": "FormCellContainer",
+		"_Type": "Control.Type.FormCellContainer",
+		"Sections": [{
+			"Controls":
+			[{
+                "Caption": "$(L, home_screen)",
+                "Value": "/SAPAssetManager/Rules/UserPreferences/HomeScreenSwitchValue.js",
+                "Segments": [
+					{
+						"DisplayValue": "$(L, New)",
+						"ReturnValue": "0"
+					},
+					{
+						"DisplayValue": "$(L, classic)",
+						"ReturnValue": "1"
+					}
+				],
+                "_Name": "HomeScreenSeg",
+                "_Type": "Control.Type.FormCell.SegmentedControl"
+			},
+			{
+                "Caption": "$(L, take_readings)",
+                "Value": "/SAPAssetManager/Rules/Measurements/Points/MeasuringPointViewInitialValue.js",
+                "Segments": [
+					{
+						"DisplayValue": "$(L, table)",
+						"ReturnValue": "0"
+					},
+					{
+						"DisplayValue": "$(L, list)",
+						"ReturnValue": "1"
+					}
+				],
+                "_Name": "ReadingsScreenSeg",
+                "_Type": "Control.Type.FormCell.SegmentedControl",
+				"IsVisible": false
+			},
+			{
+                "Caption": "/SAPAssetManager/Rules/InspectionCharacteristics/InspectionCharacteristicPersonalizationCaption.js",
+                "Value": "/SAPAssetManager/Rules/InspectionCharacteristics/InspectionCharacteristicViewInitialValue.js",
+                "Segments": [
+					{
+						"DisplayValue": "$(L, table)",
+						"ReturnValue": "0"
+					},
+					{
+						"DisplayValue": "$(L, list)",
+						"ReturnValue": "1"
+					}
+				],
+                "_Name": "CheckListScreenSeg",
+                "_Type": "Control.Type.FormCell.SegmentedControl"
+			}]
+		}]
+		}],
+	"_Name": "Personalization",
+	"_Type": "Page"
+}
