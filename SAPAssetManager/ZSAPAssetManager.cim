@@ -1,0 +1,36 @@
+{
+    "ApplicationName": "ZSAPAssetManager",
+    "ComponentVersion": "1.0.0",
+    "IntegrationPoints": [
+         { 
+            "Source": "/ZSAPAssetManager/Pages/WorkOrders/WorkOrderCreateUpdate.page",
+            "Target": "/SAPAssetManager/Pages/WorkOrders/WorkOrderCreateUpdate.page"
+        },
+        {
+            "Source": "/ZSAPAssetManager/Rules/WorkOrders/CreateUpdate/WorkOrderCreateUpdateRequiredFields.js",
+            "Target": "/SAPAssetManager/Rules/WorkOrders/CreateUpdate/WorkOrderCreateUpdateRequiredFields.js"
+        },
+        {
+            "Source": "/ZSAPAssetManager/Actions/WorkOrders/CreateUpdate/WorkOrderCreate.action",
+            "Target": "/SAPAssetManager/Actions/WorkOrders/CreateUpdate/WorkOrderCreate.action"
+        },
+        {
+            "Source": "/ZSAPAssetManager/Actions/WorkOrders/WorkOrderUpdate.action",
+            "Target": "/SAPAssetManager/Actions/WorkOrders/WorkOrderUpdate.action"
+        },
+        {
+            "Source": "/ZSAPAssetManager/Rules/WorkOrders/WorkOrderLibrary.js",
+            "Target": "/SAPAssetManager/Rules/WorkOrders/WorkOrderLibrary.js"
+        },
+        {
+            "Source": "/ZSAPAssetManager/i18n/i18n.properties",
+            "Target": "/SAPAssetManager/i18n/i18n.properties"
+        },
+        {
+            "Source": "/ZSAPAssetManager/i18n/i18n_en.properties",
+            "Target": "/SAPAssetManager/i18n/i18n_en.properties"
+        }
+        
+    ],
+    "ProjectName": "ZSAPAssetManager"
+}
