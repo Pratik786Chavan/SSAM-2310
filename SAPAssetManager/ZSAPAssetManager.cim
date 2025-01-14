@@ -29,6 +29,10 @@
         {
             "Source": "/ZSAPAssetManager/i18n/i18n_en.properties",
             "Target": "/SAPAssetManager/i18n/i18n_en.properties"
+        },
+        {
+            "Source": "/ZSAPAssetManager/Rules/Notifications/CreateUpdate/NotificationCreateUpdateTypeOnValueChange.js",
+            "Target": "/SAPAssetManager/Rules/Notifications/CreateUpdate/NotificationCreateUpdateTypeOnValueChange.js"
         }
         
     ],
