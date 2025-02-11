@@ -1,0 +1,5 @@
+{
+    "_Type": "Action.Type.BannerMessage",
+	"Message": "$(L, zdefault_checklist_message)",
+	"Duration": 5
+}

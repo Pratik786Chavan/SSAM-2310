@@ -8,7 +8,9 @@ export default function WorkOrderCreateUpdateRequiredFields(context) {
         'TypeLstPkr',
         'WorkCenterPlantLstPkr',
         'MainWorkCenterLstPkr',
-        'MaintActivityTypeLstPkr'
+        'MaintActivityTypeLstPkr',
+        'FuncLocHierarchyExtensionControl',
+        'EquipHierarchyExtensionControl'
     ];
 
     if (context.evaluateTargetPathForAPI('#Control:PrioritySeg').getVisible()) {

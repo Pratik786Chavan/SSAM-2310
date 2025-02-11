@@ -1,0 +1,14 @@
+{
+    "mdk.referenceApplications": [
+        {
+            "name": "SAPAssetManager",
+            "path": "/Users/pratikchavan/Bitbucket Code/SSAM-2310/SAPAssetManager/Application.app",
+            "comp": "ZSAPAssetManager"
+        },
+        {
+            "name": "ZSAPAssetManager",
+            "path": "/Users/pratikchavan/Bitbucket Code/SSAM-2310/ZSAPAssetManager/Application.app",
+            "comp": "SAPAssetManager"
+        }
+    ]
+}

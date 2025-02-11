@@ -11,6 +11,10 @@
             "Target": "/SAPAssetManager/Rules/WorkOrders/CreateUpdate/WorkOrderCreateUpdateRequiredFields.js"
         },
         {
+            "Source": "/ZSAPAssetManager/Rules/Notifications/CreateUpdate/RequiredFields.js",
+            "Target": "/SAPAssetManager/Rules/Notifications/CreateUpdate/RequiredFields.js"
+        },
+        {
             "Source": "/ZSAPAssetManager/Actions/WorkOrders/CreateUpdate/WorkOrderCreate.action",
             "Target": "/SAPAssetManager/Actions/WorkOrders/CreateUpdate/WorkOrderCreate.action"
         },
@@ -33,6 +37,38 @@
         {
             "Source": "/ZSAPAssetManager/Rules/Notifications/CreateUpdate/NotificationCreateUpdateTypeOnValueChange.js",
             "Target": "/SAPAssetManager/Rules/Notifications/CreateUpdate/NotificationCreateUpdateTypeOnValueChange.js"
+        },
+        {
+            "Source": "/ZSAPAssetManager/Actions/Equipment/EquipmentPopover.action",
+            "Target": "/SAPAssetManager/Actions/Equipment/EquipmentPopover.action"
+        },
+        {
+            "Source": "/ZSAPAssetManager/Actions/FunctionalLocation/FunctionalLocationPopover.action",
+            "Target": "/SAPAssetManager/Actions/FunctionalLocation/FunctionalLocationPopover.action"
+        },
+        {
+            "Source": "/ZSAPAssetManager/Pages/WorkOrders/WorkOrdersListView.page",
+            "Target": "/SAPAssetManager/Pages/WorkOrders/WorkOrdersListView.page"
+        },
+        {
+            "Source": "/ZSAPAssetManager/Actions/WorkOrders/WorkOrderDetailsAddPopover.action",
+            "Target": "/SAPAssetManager/Actions/WorkOrders/WorkOrderDetailsAddPopover.action"
+        },
+        {
+            "Source": "/ZSAPAssetManager/Pages/Fragments/MT/OverviewQAB.fragment",
+            "Target": "/SAPAssetManager/Pages/Fragments/MT/OverviewQAB.fragment"
+        },
+        {
+            "Source": "/ZSAPAssetManager/Pages/FunctionalLocation/FunctionalLocationDetails.page",
+            "Target": "/SAPAssetManager/Pages/FunctionalLocation/FunctionalLocationDetails.page"
+        },
+        {
+            "Source": "/ZSAPAssetManager/Pages/Equipment/EquipmentDetails.page",
+            "Target": "/SAPAssetManager/Pages/Equipment/EquipmentDetails.page"
+        },
+        {
+            "Source": "/ZSAPAssetManager/Rules/WorkOrders/NavOnCompleteWorkOrderPage.js",
+            "Target": "/SAPAssetManager/Rules/WorkOrders/NavOnCompleteWorkOrderPage.js"
         }
         
     ],
